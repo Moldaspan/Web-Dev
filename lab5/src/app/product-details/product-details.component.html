@@ -1,0 +1,14 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <h3>
+    <a href="{{ product.prodLink }}"> {{ product.name }}</a>
+  </h3>
+  <img src="{{ product.images }}" style="width: 400px" />
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+  <button class = "delete" type="button" (click)="deleteProduct(product)">Delete</button><br>
+  <button class = "like" type="button" (click)="likeProduct(product)">Like</button>
+  <a>{{product.likes}}</a>
+</div>
